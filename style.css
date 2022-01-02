@@ -1,0 +1,267 @@
+html{
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: 0.15fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "section welcome"
+        "section info"
+        "section edu"
+        "section exp";
+    height: 300vh;
+    margin: 0;
+}
+.welcome .photo{
+    width: 330px;
+    height: 330px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 10px;
+    border: solid 5px white;
+}
+section nav h1{
+    color: black;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0;
+    margin-bottom: 100px;
+}
+section nav h3{
+    color: black;
+    letter-spacing: 5px;
+    padding-left: 20px;
+}
+section nav h3:hover{
+    color: white;
+}
+section nav h3:active{
+    color: #03c2fc;
+}
+section nav a{
+    text-decoration: none;
+}
+section{
+    background-image: linear-gradient(180deg, lightgreen, aqua, lightyellow, #FFBF56, #c6fa66);
+    grid-area: section;
+}
+section nav{
+    grid-area: nav;
+    position: sticky;
+    align-self: start;
+    top: 0;
+    left: 0;
+}
+.welcome{
+    background-image: linear-gradient(0deg, aqua, lightgreen);
+    grid-area: welcome;
+    border-radius: 10px;
+    margin: 10px;
+}
+.welcome h1{
+    text-align: center;
+    font-family: 'Vujahday Script', cursive;
+    font-size: 70px;
+    letter-spacing: 20px;
+}
+.welcome h3{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10vh;
+    letter-spacing: 50px;
+}
+.welcome .p1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10vh;
+}
+.welcome .p2{
+    font-size: 25px;
+    text-align: center;
+}
+.info{
+    background-image: linear-gradient(0deg, lightyellow, aqua);
+    background-color: aqua;
+    grid-area: info;
+    border-radius: 10px;
+    margin: 10px;
+}
+.info h3{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.pinfo1{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+dt{
+    font-weight: bolder;
+    font-size:30px;
+    letter-spacing: 5px;
+}
+dd{
+    font-size: 23px;
+}
+.info .cal input{
+    border-radius: 7px;
+    height: 30px;
+}
+.btncal:hover{
+    background-color: greenyellow;
+}
+.edu{
+    background-image: linear-gradient(0deg, #FFBF56, lightyellow);
+    grid-area: edu;
+    border-radius: 10px;
+    margin: 10px;
+}
+.edu h3{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+.exp{
+    background-image: linear-gradient(0deg, #c6fa66, #FFBF56);
+    grid-area: exp;
+    border-radius: 10px;
+    margin: 10px;
+}
+.exp h3{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 10px;
+}
+
+@media screen and (min-width: 951px) {
+    .btnmenu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "welcome"
+            "info"
+            "edu"
+            "exp";
+        height: 300vh;
+        margin: 0;
+    }
+    .welcome .photo{
+        width: 250px;
+        height: 250px;
+    }
+    
+    .btnmenu{
+        position: fixed;
+        color: black;
+        background-image: linear-gradient(90deg, lightgreen, yellow);
+        /* z-index: 999; */
+        margin-top: 15px;
+        margin-left: 15px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    section{
+        display: none;
+    }
+    .welcome h3{
+        text-align: center;
+        font-size: 30px;
+        /* margin-top: 30vh; */
+        letter-spacing: 30px;
+    }
+    .welcome h1{
+        text-align: center;
+        font-family: 'Vujahday Script', cursive;
+        font-size: 50px;
+        letter-spacing: 20px;
+        word-wrap: break-word;
+    }
+    .welcome .p1{
+        font-size: 20px;
+        text-align: center;
+        /* margin-top: 25vh; */
+    }
+    .welcome .p2{
+        font-size: 15px;
+        text-align: center;
+    }    
+}
+
+@media screen and (max-width: 450px) {
+    .welcome h3{
+        text-align: center;
+        font-size: 20px;
+        /* margin-top: 30vh; */
+        letter-spacing: 10px;
+    }
+    .welcome h1{
+        text-align: center;
+        font-family: 'Vujahday Script', cursive;
+        font-size: 25px;
+        letter-spacing: 10px;
+        word-wrap: break-word;
+    }
+    .welcome .p1{
+        font-size: 15px;
+        text-align: center;
+        /* margin-top: 25vh; */
+    }
+    .welcome .p2{
+        font-size: 15px;
+        text-align: center;
+    }    
+}
+
+/* Side-Nav-Bar taken from https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidenav .a1{
+      margin-bottom: 20vh;
+  }
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  @media screen and (min-width: 951) {
+      .sidenav{display: none;}
+  }

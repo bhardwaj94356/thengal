@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js"></script>
     </head>
-    <body>
+    <body id="theme">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#welcome" class="a1">CHEERFUL</a>
@@ -19,6 +19,7 @@
             <a href="#info">Personal</a>
             <a href="#edu">Education</a>
             <a href="#exp">Experience</a>
+            <input type="button" value="Light & Dark" class="toggle-btn-res" onclick="dark()">
         </div>
         <section>
             <nav>
@@ -27,6 +28,7 @@
                 <a href="#info"><h3>Personal</h3></a>
                 <a href="#edu"><h3>Education</h3></a>
                 <a href="#exp"><h3>Experience</h3></a>
+                <input type="button" value="Light & Dark" class="toggle-btn" onclick="dark()">
             </nav>
         </section>
         <button class="btnmenu" onclick="openNav()">Menu</button>
@@ -100,6 +102,10 @@
                 <b>Duty</b> - Software Troubleshooting and Upgrading to new Technology <br>
                 <b>Period</b> - 6 Months</dd>
             </dl>
+            <!-- <input type="number" name="" id="num1" oninput="addNum()">
+            <input type="number" name="" id="num2" oninput="addNum()">
+            <input type="number" name="" id="num3">
+            <button type="submit" onclick="dark()">Toggle Theme</button> -->
         </div>
     </body>
 </html>

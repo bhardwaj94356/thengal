@@ -1,19 +1,19 @@
 html{
     scroll-behavior: smooth;
     font-family: 'Open Sans', sans-serif;
-    color: black;
+    /* color: black; */
 }
 body{
     display: grid;
     grid-template-columns: 0.15fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "section welcome"
+    "section welcome"
         "section info"
         "section edu"
         "section exp";
-    height: 300vh;
-    margin: 0;
+        height: 300vh;
+        margin: 0;
 }
 .welcome .photo{
     width: 330px;
@@ -28,7 +28,7 @@ section nav h1{
     color: black;
     font-size: 50px;
     font-weight: bolder;
-    margin: 0;
+    margin: 10px;
     margin-bottom: 100px;
 }
 section nav h3{
@@ -149,10 +149,10 @@ dd{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "welcome"
-            "info"
-            "edu"
-            "exp";
+        "welcome"
+        "info"
+        "edu"
+        "exp";
         height: 300vh;
         margin: 0;
     }
@@ -230,39 +230,64 @@ dd{
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: -5px;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
-  
-  .sidenav a {
+}
+
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
-  .sidenav .a1{
-      margin-bottom: 20vh;
-  }
-  .sidenav a:hover {
+}
+.sidenav .a1{
+    margin-bottom: 20vh;
+}
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+}
   
-  .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  @media screen and (max-height: 450px) {
+}
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
-  @media screen and (min-width: 951) {
-      .sidenav{display: none;}
-  }
+}
+@media screen and (min-width: 951) {
+    .sidenav{display: none;}
+}
+.toggle-btn {
+    border-radius: 5px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.toggle-btn-res {
+    border:ridge;
+    border-radius: 5px;
+    height: 30px;
+    margin: 30px;
+    cursor: pointer;
+    background-color: rgb(141, 141, 141);
+}
+.dark-mode {
+    background-color: #617781;
+    /* color: white; */
+}
+.dark-mode * {
+    background-image: linear-gradient(0deg, #2f5769, #2f5769);
+    color: rgb(219, 219, 219);
+}
+.dark-mode section, .welcome, .info, .edu, .exp, .sidenav {
+    border: solid 2px rgb(219, 219, 219);
+}
